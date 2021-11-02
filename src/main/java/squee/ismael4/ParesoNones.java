@@ -10,21 +10,36 @@ import java.util.Scanner;
  *
  * @author ismajj
  */
-public class paresonones {
+public class ParesoNones {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        
+
         String eleccionA;
-        do{
+        do {
             System.out.println("PARES o NONES");
-        System.out.println("Jugador A, elige una opción: [pares] o [nones]");
-        eleccionA = teclado.nextLine();
+            System.out.println("Jugador A, elige una opción: [pares] o [nones]");
+            eleccionA = teclado.nextLine();
         } while (!(eleccionA.equalsIgnoreCase("pares") || eleccionA.equalsIgnoreCase("nones")));
+
+        int dedosA;
+        do{
+        System.out.println("Dedos mostrados por jugador A =");
+        dedosA = teclado.nextInt();
+        } while (dedosA > 10);
         
+        int dedosB;
+        do{
+        System.out.println("Dedos mostrados por jugador B =");
+        dedosB = teclado.nextInt();
+        } while (dedosB > 10);
+        
+        int resultado = (dedosA + dedosB);
+        
+        System.out.println(resultado);
     }
-    
+
 }
