@@ -39,7 +39,19 @@ public class ParesoNones {
         
         int resultado = (dedosA + dedosB);
         
-        System.out.println(resultado);
+        if (eleccionA.equalsIgnoreCase("pares")) {
+            if (resultado % 2 == 0) {
+                System.out.println("El resultado (" + resultado + ") es par. Gana el Jugador A");
+            } else {
+                System.out.println("El resultado (" + resultado + ") es impar. Gana el Jugador B");
+            }
+        }
+            if (eleccionA.equalsIgnoreCase("nones")) {
+                if (resultado % 2 == 1) {
+                    System.out.println("El resultado (" + resultado + ") es par. Gana el Jugador A");
+                } else {
+                    System.out.println("El resultado (" + resultado + ") es impar. Gana el Jugador B");
+                }
+            }
+        }
     }
-
-}
