@@ -48,9 +48,9 @@ public class ParesoNones {
         }
             if (eleccionA.equalsIgnoreCase("nones")) {
                 if (resultado % 2 == 1) {
-                    System.out.println("El resultado (" + resultado + ") es par. Gana el Jugador A");
+                    System.out.println("El resultado (" + resultado + ") es impar. Gana el Jugador A.");
                 } else {
-                    System.out.println("El resultado (" + resultado + ") es impar. Gana el Jugador B");
+                    System.out.println("El resultado (" + resultado + ") es par. Gana el Jugador B.");
                 }
             }
         }
