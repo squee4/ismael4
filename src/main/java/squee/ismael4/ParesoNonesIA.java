@@ -4,6 +4,9 @@
  */
 package squee.ismael4;
 
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  *
  * @author ismajj
@@ -14,7 +17,43 @@ public class ParesoNonesIA {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Scanner teclado = new Scanner(System.in);
+        Random random = new Random();
+
+        String eleccionA;
+        do {
+            System.out.println("PARES o NONES");
+            System.out.println("Jugador A, elige una opción: [pares] o [nones]");
+            eleccionA = teclado.nextLine();
+        } while (!(eleccionA.equalsIgnoreCase("pares") || eleccionA.equalsIgnoreCase("nones")));
+
+        int dedosA;
+        do{
+        System.out.println("Dedos mostrados por jugador A =");
+        dedosA = teclado.nextInt();
+        } while (dedosA > 10);
+        
+        int dedosB;
+        dedosB = random.nextInt(11);
+        System.out.println("Dedos mostrados por jugador B = "+dedosB);
+        
+        int resultado = (dedosA + dedosB);
+        
+        if (eleccionA.equalsIgnoreCase("pares")) {
+            if (resultado % 2 == 0) {
+                System.out.println("El resultado (" + resultado + ") es par. Gana el Jugador A");
+            } else {
+                System.out.println("El resultado (" + resultado + ") es impar. Gana el Jugador B");
+            }
+        }
+            if (eleccionA.equalsIgnoreCase("nones")) {
+                if (resultado % 2 == 1) {
+                    System.out.println("El resultado (" + resultado + ") es par. Gana el Jugador A");
+                } else {
+                    System.out.println("El resultado (" + resultado + ") es impar. Gana el Jugador B");
+                }
+            }
     }
     
 }
